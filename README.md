@@ -14,7 +14,7 @@ These 21 classes are listed in  ```target_class.txt```
 ## Installation and Running
 1. Users are required to install [tensorflow](https://www.tensorflow.org/) Library.
 
-2. First train a CNN model by setting the parameters as follows:
+2. First, train a CNN model by setting the parameters as follows:
 
 	* In RNN_multiOb_12_5.py (line 341): cross_entropy =  0 * self.cross_entropy_di + self.cross_entropy_cnn
  	* In main.py (line 342 - 345 ): Use 'model.optimize_ZOC', 'model.optimize_AOC', 'model.optimize_TSC'.
