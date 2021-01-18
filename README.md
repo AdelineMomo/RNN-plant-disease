@@ -18,7 +18,7 @@ These 21 classes are listed in  ```target_class.txt```
 2. Users are required to download the necessary files [here](https://github.com/cs-chan/Deep-Plant/tree/master/PlantStructNet/Dataset) and the aforementioned dataset.
 
 3. Users can first train a CNN model by setting the parameters as follows:
-* In RNN_multiOb_12_5.py (line 341): cross_entropy =  0 * self.cross_entropy_di + self.cross_entropy_cnn 
+  * In RNN_multiOb_12_5.py (line 341): cross_entropy =  0 * self.cross_entropy_di + self.cross_entropy_cnn 
 * In main.py (line 342 - 345 ): Use 'model.optimize_ZOC', 'model.optimize_AOC', 'model.optimize_TSC'.
 
 4. Next, to train the RNN model, freeze the CNN model by setting the parameters as follows:
