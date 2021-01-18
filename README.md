@@ -27,6 +27,19 @@ These 21 classes are listed in  ```target_class.txt```
 
 Note that users are expected to modify the corresponding files to correct path to work properly. Enjoy!
 
+## Dataset
+* PlantClef image dataset can be downloaded [here](http://www.imageclef.org/lifeclef/2015/plant).
+
+* Extract the convolutional features of the HGO-CNN pretrained using [caffe](http://caffe.berkeleyvision.org/). Details of the HGO-CNN can be obtained [here](https://ieeexplore.ieee.org/document/8359391/). 
+
+	* After downloaded the PlantClef2015 dataset, users have to categorise the images into their respective species classes based on the information provided [here](http://www.imageclef.org/lifeclef/2015/plant)
+ * Then, please run the ``` getfeatures.py ``` in the 'CNN' folder to extract the convolutional features from the pretrained [HGO-CNN](PlantClef_vgg_species_organ_iter_180854.caffemodel) model.
+	    Mean file ``` species_mean_aug.npy ``` and the deploy.prototxt file ``` PlantClef_VGGmultipath_deploy  ``` are provided in the 'CNN' folder to run the code.
+
+
+
+
+
 ## Feedback
 Suggestions and opinions of this work (both positive and negative) are greatly welcome. Please contact the authors by sending email to ``` adeline87lee@gmail ``` or  ``` herve.goeau@cirad.  ```
 
