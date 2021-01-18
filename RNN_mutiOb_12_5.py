@@ -6,7 +6,6 @@ Created on Wed Feb 15 15:01:02 2017
 """
 import math
 import functools
-#import sets
 import tensorflow as tf
 from tensorflow.contrib import slim
 from tensorflow.contrib.slim.nets import vgg
@@ -37,15 +36,9 @@ class VariableSequenceClassification:
         self.STRIDES = 2
         self.max_length = 16
         self.length = 16
- 
-#        self.KSIZE = 6
-#        self.STRIDES = 2
-#        self.max_length = 25
-#        self.length = 25
-        
+
         self._istraining = is_training
         def _channel_shuffle(X, ksize, depth, groups=4): # groups=4): #5 #bqtch, 9,9,7500
-#         ksize = 50
             X = tf.reshape(X,[self.batch_size,-1,ksize*ksize*depth])  #  batch, 81, features 
             X = tf.transpose(X,[0,2,1]) # batch, features, 81 
             featuresR,_ = X.shape.as_list()[1:] # [features, 81 ]  81 = max_length
@@ -66,7 +59,6 @@ class VariableSequenceClassification:
         
         self.L = slim.get_variables_to_restore()[0:-2]
         self.vgg_saver = tf.train.Saver(self.L)  
-#        self.vgg_saver = tf.train.Saver()  
         
         self.data = self.end_points['vgg_16/conv5/conv5_3'] 
         
@@ -117,10 +109,10 @@ class VariableSequenceClassification:
         self.depth = lambda d: max(int(d * depth_multiplier), min_depth)
 
 
-#        self.prediction_cnn
+
         self.prediction
         self.error
-#        self.optimize
+
         self.optimize_ZOR
         self.optimize_AOR
         self.optimize_TSR
@@ -136,13 +128,6 @@ class VariableSequenceClassification:
         self.grad_cam
 
         
-#    @lazy_property        
-#    def prediction_cnn(self):
-#        with tf.variable_scope("CnnLogits"):               
-#             prediction_cnn = tf.nn.softmax(self.logits_cnn, name='probability_cnn') 
-#             return prediction_cnn
-#       
-
 
 
     @lazy_property        
@@ -332,7 +317,6 @@ class VariableSequenceClassification:
     @lazy_property
     def alpha_list_com(self):
         pred = self.prediction
-#        pred_cnn,_ = self.prediction_cnn
         alpha_forward1 = self.alpha_list1
         alpha_backward1 = self.alpha_list1_re
         return pred, alpha_forward1,alpha_backward1
@@ -426,7 +410,7 @@ class VariableSequenceClassification:
     @lazy_property
     def optimize_TS(self):
         learning_rate = 0.0001 #0.001##0.001#
-#
+
 #     ################################################################################
         with tf.control_dependencies([self.cost]):
             loss = tf.add_n(tf.losses.get_losses())
