@@ -10,11 +10,18 @@ The codes are based on [Tensorflow](https://www.tensorflow.org/)
 * In order to train the purely disease classifier with the model using vernacular disease names, the leaf samples of PV dataset are first categorized into 21 classes (20 diseases and one healthy class).
 These 21 classes are listed in  ```target_class.txt```
 
+
 ## Installation and Running
 
-1. Users are required to install [Caffe](https://github.com/BVLC/caffe) Library.
+1. Users are required to install [tensorflow](https://www.tensorflow.org/) Library.
 
-2. The train_val.prototxt and solver.prototxt are provided and can be found in the  ```models``` folder.
+2. Users are required to download the necessary files [here](https://github.com/cs-chan/Deep-Plant/tree/master/PlantStructNet/Dataset) and the aforementioned dataset.
+
+3. Users can train the model from scratch by running the ``` mainClef.py ``` which includes ``` temp_createStruct5.py ``` and ``` attn_7_1_ex.py ```.
+
+4. Users can test the trained model prepared in the 'model' folder.
+
+
 
 Note that users are expected to modify the corresponding files to correct path to work properly. Enjoy!
 
