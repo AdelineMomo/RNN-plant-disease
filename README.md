@@ -1,5 +1,5 @@
 # RNN-plant-disease
-This is the implementation of our [Frontiers in Plant Science 2020](https://www.frontiersin.org/articles/10.3389/fpls.2020.601250/full) work with titled -- Attention-Based Recurrent Neural Network for Plant Disease Classification. This is the implementation of our [CLEF 2018](http://clef2018.clef-initiative.eu/) work with titled -- Plant Classification based on Gated Recurrent Unit.  We study a new technique based on a recurrent neural network (RNN) to automatically locate infected regions and extract characteristics relevant for disease identification.
+This is the implementation of our [Frontiers in Plant Science 2020](https://www.frontiersin.org/articles/10.3389/fpls.2020.601250/full) work with titled -- Attention-Based Recurrent Neural Network for Plant Disease Classification. We study a new technique based on a recurrent neural network (RNN) to automatically locate infected regions and extract characteristics relevant for disease identification.
 The project is open source under BSD-3 license (see the ``` LICENSE ``` file). Codes can be used freely only for academic purpose.
 
 ## Dependency
